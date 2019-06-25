@@ -35,12 +35,10 @@ Rscript -e 'install.packages(c("data.table",
 sudo apt-get install git
 cd $HOME
 # clone PHESANT library
-git clone https://github.com/astheeggeggs/PHESANT.git
+git clone https://github.com/astheeggeggs/UKBB_ldsc_r2.git
 
 # Ensure that all of the files that are required have been copied over.
-
-# Move the required reengineering_phenofile.r over.
-gsutil cp gs://ukbb_association/reengineering_phenofile_neale_lab.r $HOME
+gsutil cp ~/Repositories/ gs://ukbb_association/reengineering_phenofile_neale_lab.r $HOME
 
 # Move the raw phenotype file.
 gsutil cp gs://ukbb_3106/ukb11214.csv $HOME
