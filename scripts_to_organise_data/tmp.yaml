@@ -1,0 +1,2744 @@
+ rg_summary_100001_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "100001_irnt"
+  rg_summary_100002_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "100002_irnt"
+  rg_summary_100010.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "100010"
+  rg_summary_100011_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "100011_irnt"
+  rg_summary_100016_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "100016_irnt"
+  rg_summary_100017_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "100017_irnt"
+  rg_summary_1011.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1011"
+  rg_summary_1021.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1021"
+  rg_summary_102_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "102_irnt"
+  rg_summary_1031.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1031"
+  rg_summary_1050.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1050"
+  rg_summary_1060.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1060"
+  rg_summary_1070.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1070"
+  rg_summary_1080.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1080"
+  rg_summary_1090.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1090"
+  rg_summary_1100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1100"
+  rg_summary_110001.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "110001"
+  rg_summary_1110.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1110"
+  rg_summary_1120.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1120"
+  rg_summary_1130.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1130"
+  rg_summary_1140.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1140"
+  rg_summary_1150_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1150_1"
+  rg_summary_1150_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1150_2"
+  rg_summary_1150_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1150_3"
+  rg_summary_1160.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1160"
+  rg_summary_1170.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1170"
+  rg_summary_1180.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1180"
+  rg_summary_1190.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1190"
+  rg_summary_1200.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1200"
+  rg_summary_1210.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1210"
+  rg_summary_1220.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1220"
+  rg_summary_1239.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1239"
+  rg_summary_1249.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1249"
+  rg_summary_1259.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1259"
+  rg_summary_1269.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1269"
+  rg_summary_1279.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1279"
+  rg_summary_1289.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1289"
+  rg_summary_1299.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1299"
+  rg_summary_129_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "129_irnt"
+  rg_summary_1309.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1309"
+  rg_summary_1319.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1319"
+  rg_summary_1329.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1329"
+  rg_summary_1339.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1339"
+  rg_summary_134.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "134"
+  rg_summary_1349.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1349"
+  rg_summary_135.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "135"
+  rg_summary_1359.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1359"
+  rg_summary_136.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "136"
+  rg_summary_1369.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1369"
+  rg_summary_137.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "137"
+  rg_summary_1379.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1379"
+  rg_summary_1389.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1389"
+  rg_summary_1408.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1408"
+  rg_summary_1418_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1418_1"
+  rg_summary_1418_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1418_2"
+  rg_summary_1418_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1418_3"
+  rg_summary_1418_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1418_4"
+  rg_summary_1418_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1418_6"
+  rg_summary_1428_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1428_0"
+  rg_summary_1428_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1428_1"
+  rg_summary_1428_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1428_3"
+  rg_summary_1438_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1438_irnt"
+  rg_summary_1448_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1448_1"
+  rg_summary_1448_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1448_3"
+  rg_summary_1458.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1458"
+  rg_summary_1468_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1468_3"
+  rg_summary_1468_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1468_4"
+  rg_summary_1468_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1468_5"
+  rg_summary_1478.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1478"
+  rg_summary_1488_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1488_irnt"
+  rg_summary_1498.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1498"
+  rg_summary_1508_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1508_1"
+  rg_summary_1508_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1508_2"
+  rg_summary_1508_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1508_3"
+  rg_summary_1518.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1518"
+  rg_summary_1528.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1528"
+  rg_summary_1538_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1538_0"
+  rg_summary_1538_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1538_1"
+  rg_summary_1538_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1538_2"
+  rg_summary_1548.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1548"
+  rg_summary_1558.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1558"
+  rg_summary_1568.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1568"
+  rg_summary_1578.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1578"
+  rg_summary_1588.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1588"
+  rg_summary_1598.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1598"
+  rg_summary_1618.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1618"
+  rg_summary_1628.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1628"
+  rg_summary_1677.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1677"
+  rg_summary_1687.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1687"
+  rg_summary_1697.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1697"
+  rg_summary_1757.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1757"
+  rg_summary_1787.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1787"
+  rg_summary_1807_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1807_irnt"
+  rg_summary_1873.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1873"
+  rg_summary_1883.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1883"
+  rg_summary_189_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "189_irnt"
+  rg_summary_1920.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1920"
+  rg_summary_1930.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1930"
+  rg_summary_1940.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1940"
+  rg_summary_1950.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1950"
+  rg_summary_1960.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1960"
+  rg_summary_1970.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1970"
+  rg_summary_1980.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1980"
+  rg_summary_1990.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "1990"
+  rg_summary_2000.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2000"
+  rg_summary_20002_1065.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1065"
+  rg_summary_20002_1074.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1074"
+  rg_summary_20002_1075.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1075"
+  rg_summary_20002_1094.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1094"
+  rg_summary_20002_1111.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1111"
+  rg_summary_20002_1138.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1138"
+  rg_summary_20002_1220.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1220"
+  rg_summary_20002_1226.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1226"
+  rg_summary_20002_1265.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1265"
+  rg_summary_20002_1286.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1286"
+  rg_summary_20002_1309.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1309"
+  rg_summary_20002_1387.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1387"
+  rg_summary_20002_1465.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1465"
+  rg_summary_20002_1473.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1473"
+  rg_summary_20002_1474.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20002_1474"
+  rg_summary_20003_1140860696.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140860696"
+  rg_summary_20003_1140860806.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140860806"
+  rg_summary_20003_1140861958.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140861958"
+  rg_summary_20003_1140861998.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140861998"
+  rg_summary_20003_1140864752.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140864752"
+  rg_summary_20003_1140865634.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140865634"
+  rg_summary_20003_1140866738.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140866738"
+  rg_summary_20003_1140868226.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140868226"
+  rg_summary_20003_1140871310.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140871310"
+  rg_summary_20003_1140879802.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140879802"
+  rg_summary_20003_1140884488.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140884488"
+  rg_summary_20003_1140884600.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140884600"
+  rg_summary_20003_1140923346.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1140923346"
+  rg_summary_20003_1141146234.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1141146234"
+  rg_summary_20003_1141191044.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1141191044"
+  rg_summary_20003_1141194794.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_1141194794"
+  rg_summary_20003_2038460150.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20003_2038460150"
+  rg_summary_20015_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20015_irnt"
+  rg_summary_20016_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20016_irnt"
+  rg_summary_20018.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20018"
+  rg_summary_20022_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20022_irnt"
+  rg_summary_20023_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20023_irnt"
+  rg_summary_20075_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20075_irnt"
+  rg_summary_20077.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20077"
+  rg_summary_2010.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2010"
+  rg_summary_20107_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20107_1"
+  rg_summary_20107_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20107_100"
+  rg_summary_20107_101.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20107_101"
+  rg_summary_20107_13.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20107_13"
+  rg_summary_20107_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20107_3"
+  rg_summary_20107_8.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20107_8"
+  rg_summary_20107_9.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20107_9"
+  rg_summary_20110_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20110_1"
+  rg_summary_20110_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20110_100"
+  rg_summary_20110_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20110_6"
+  rg_summary_20110_8.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20110_8"
+  rg_summary_20110_9.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20110_9"
+  rg_summary_20111_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20111_1"
+  rg_summary_20111_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20111_100"
+  rg_summary_20111_12.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20111_12"
+  rg_summary_20111_8.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20111_8"
+  rg_summary_20111_9.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20111_9"
+  rg_summary_20116_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20116_0"
+  rg_summary_20116_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20116_1"
+  rg_summary_20116_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20116_2"
+  rg_summary_20117_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20117_0"
+  rg_summary_20117_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20117_1"
+  rg_summary_20117_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20117_2"
+  rg_summary_20118_11.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20118_11"
+  rg_summary_20126_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20126_0"
+  rg_summary_20127_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20127_irnt"
+  rg_summary_20128.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20128"
+  rg_summary_20150_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20150_irnt"
+  rg_summary_20151_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20151_irnt"
+  rg_summary_20152.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20152"
+  rg_summary_20153_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20153_irnt"
+  rg_summary_20154_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20154_irnt"
+  rg_summary_20160.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20160"
+  rg_summary_2020.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2020"
+  rg_summary_2030.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2030"
+  rg_summary_2040.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2040"
+  rg_summary_20403.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20403"
+  rg_summary_20414.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20414"
+  rg_summary_20416.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20416"
+  rg_summary_20421.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20421"
+  rg_summary_20425.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20425"
+  rg_summary_20441.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20441"
+  rg_summary_20446.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20446"
+  rg_summary_20453.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20453"
+  rg_summary_20458.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20458"
+  rg_summary_20459.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20459"
+  rg_summary_20460.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20460"
+  rg_summary_20479.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20479"
+  rg_summary_20485.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20485"
+  rg_summary_20487.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20487"
+  rg_summary_20488.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20488"
+  rg_summary_20489.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20489"
+  rg_summary_20491.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20491"
+  rg_summary_20495.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20495"
+  rg_summary_20497.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20497"
+  rg_summary_20498.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20498"
+  rg_summary_20499.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20499"
+  rg_summary_2050.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2050"
+  rg_summary_20500.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20500"
+  rg_summary_20502.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20502"
+  rg_summary_20505.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20505"
+  rg_summary_20509.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20509"
+  rg_summary_20510.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20510"
+  rg_summary_20511.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20511"
+  rg_summary_20512.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20512"
+  rg_summary_20514.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20514"
+  rg_summary_20517.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20517"
+  rg_summary_20518.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20518"
+  rg_summary_20519.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20519"
+  rg_summary_20520.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20520"
+  rg_summary_20521.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20521"
+  rg_summary_20522.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20522"
+  rg_summary_20523.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20523"
+  rg_summary_20529.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20529"
+  rg_summary_20531.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20531"
+  rg_summary_20536_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20536_0"
+  rg_summary_20544_11.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20544_11"
+  rg_summary_20544_15.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20544_15"
+  rg_summary_20546_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20546_3"
+  rg_summary_20547_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20547_1"
+  rg_summary_20548_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20548_1"
+  rg_summary_20548_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20548_2"
+  rg_summary_20550_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "20550_1"
+  rg_summary_2060.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2060"
+  rg_summary_2070.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2070"
+  rg_summary_2080.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2080"
+  rg_summary_2090.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2090"
+  rg_summary_2100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2100"
+  rg_summary_21001_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "21001_irnt"
+  rg_summary_21002_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "21002_irnt"
+  rg_summary_21021_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "21021_irnt"
+  rg_summary_2110.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2110"
+  rg_summary_2129.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2129"
+  rg_summary_2139_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2139_irnt"
+  rg_summary_2149.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2149"
+  rg_summary_2159.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2159"
+  rg_summary_2178.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2178"
+  rg_summary_2188.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2188"
+  rg_summary_2207.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2207"
+  rg_summary_22126.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22126"
+  rg_summary_22127.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22127"
+  rg_summary_2217_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2217_irnt"
+  rg_summary_2227.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2227"
+  rg_summary_2237.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2237"
+  rg_summary_2247_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2247_0"
+  rg_summary_2247_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2247_1"
+  rg_summary_22501_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22501_irnt"
+  rg_summary_22502.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22502"
+  rg_summary_22504.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22504"
+  rg_summary_22506_113.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22506_113"
+  rg_summary_22506_114.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22506_114"
+  rg_summary_2257.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2257"
+  rg_summary_22601_23143401.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22601_23143401"
+  rg_summary_22606_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22606_2"
+  rg_summary_22607_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22607_0"
+  rg_summary_22607_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22607_1"
+  rg_summary_22608_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22608_2"
+  rg_summary_22609_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22609_2"
+  rg_summary_22610_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22610_1"
+  rg_summary_22617_2314.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22617_2314"
+  rg_summary_2267.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2267"
+  rg_summary_22704_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "22704_irnt"
+  rg_summary_2277.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2277"
+  rg_summary_2296.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2296"
+  rg_summary_2306.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2306"
+  rg_summary_23098_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23098_irnt"
+  rg_summary_23099_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23099_irnt"
+  rg_summary_23100_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23100_irnt"
+  rg_summary_23101_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23101_irnt"
+  rg_summary_23102_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23102_irnt"
+  rg_summary_23104_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23104_irnt"
+  rg_summary_23105_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23105_irnt"
+  rg_summary_23106_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23106_irnt"
+  rg_summary_23107_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23107_irnt"
+  rg_summary_23108_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23108_irnt"
+  rg_summary_23109_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23109_irnt"
+  rg_summary_23110_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23110_irnt"
+  rg_summary_23111_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23111_irnt"
+  rg_summary_23112_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23112_irnt"
+  rg_summary_23113_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23113_irnt"
+  rg_summary_23114_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23114_irnt"
+  rg_summary_23115_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23115_irnt"
+  rg_summary_23116_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23116_irnt"
+  rg_summary_23117_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23117_irnt"
+  rg_summary_23118_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23118_irnt"
+  rg_summary_23119_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23119_irnt"
+  rg_summary_23120_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23120_irnt"
+  rg_summary_23121_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23121_irnt"
+  rg_summary_23122_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23122_irnt"
+  rg_summary_23123_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23123_irnt"
+  rg_summary_23124_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23124_irnt"
+  rg_summary_23125_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23125_irnt"
+  rg_summary_23126_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23126_irnt"
+  rg_summary_23127_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23127_irnt"
+  rg_summary_23128_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23128_irnt"
+  rg_summary_23129_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23129_irnt"
+  rg_summary_23130_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "23130_irnt"
+  rg_summary_2316.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2316"
+  rg_summary_2335.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2335"
+  rg_summary_2345.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2345"
+  rg_summary_2365.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2365"
+  rg_summary_2375.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2375"
+  rg_summary_2385.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2385"
+  rg_summary_2395_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2395_1"
+  rg_summary_2395_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2395_2"
+  rg_summary_2395_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2395_3"
+  rg_summary_2395_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2395_4"
+  rg_summary_24003_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "24003_irnt"
+  rg_summary_24004_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "24004_irnt"
+  rg_summary_24006_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "24006_irnt"
+  rg_summary_24016_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "24016_irnt"
+  rg_summary_24017_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "24017_irnt"
+  rg_summary_24018_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "24018_irnt"
+  rg_summary_24019_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "24019_irnt"
+  rg_summary_2405.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2405"
+  rg_summary_2415.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2415"
+  rg_summary_2443.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2443"
+  rg_summary_2463.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2463"
+  rg_summary_2473.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2473"
+  rg_summary_2492.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2492"
+  rg_summary_2634.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2634"
+  rg_summary_2644.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2644"
+  rg_summary_2654_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2654_4"
+  rg_summary_2654_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2654_6"
+  rg_summary_2664_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2664_3"
+  rg_summary_2664_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2664_5"
+  rg_summary_2714.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2714"
+  rg_summary_2724.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2724"
+  rg_summary_2744.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2744"
+  rg_summary_2754_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2754_irnt"
+  rg_summary_2764_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2764_irnt"
+  rg_summary_2794_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2794_irnt"
+  rg_summary_2814.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2814"
+  rg_summary_2844.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2844"
+  rg_summary_2867_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2867_irnt"
+  rg_summary_2887.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2887"
+  rg_summary_2926.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2926"
+  rg_summary_2966_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "2966_irnt"
+  rg_summary_30000_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30000_irnt"
+  rg_summary_30010_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30010_irnt"
+  rg_summary_30020_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30020_irnt"
+  rg_summary_30030_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30030_irnt"
+  rg_summary_30040_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30040_irnt"
+  rg_summary_30050_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30050_irnt"
+  rg_summary_30060_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30060_irnt"
+  rg_summary_30070_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30070_irnt"
+  rg_summary_30080_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30080_irnt"
+  rg_summary_30090_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30090_irnt"
+  rg_summary_30100_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30100_irnt"
+  rg_summary_30110_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30110_irnt"
+  rg_summary_30120_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30120_irnt"
+  rg_summary_30130_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30130_irnt"
+  rg_summary_30140_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30140_irnt"
+  rg_summary_30150.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30150"
+  rg_summary_30160.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30160"
+  rg_summary_30180_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30180_irnt"
+  rg_summary_30190_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30190_irnt"
+  rg_summary_30200_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30200_irnt"
+  rg_summary_30210_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30210_irnt"
+  rg_summary_30220_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30220_irnt"
+  rg_summary_30240_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30240_irnt"
+  rg_summary_30250_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30250_irnt"
+  rg_summary_30260_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30260_irnt"
+  rg_summary_30270_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30270_irnt"
+  rg_summary_30280_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30280_irnt"
+  rg_summary_30290_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30290_irnt"
+  rg_summary_30300_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30300_irnt"
+  rg_summary_30500_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30500_irnt"
+  rg_summary_30510_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30510_irnt"
+  rg_summary_30520_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30520_irnt"
+  rg_summary_30530_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "30530_irnt"
+  rg_summary_3062_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3062_irnt"
+  rg_summary_3063_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3063_irnt"
+  rg_summary_3064_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3064_irnt"
+  rg_summary_3143_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3143_irnt"
+  rg_summary_3144_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3144_irnt"
+  rg_summary_3147_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3147_irnt"
+  rg_summary_3148_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3148_irnt"
+  rg_summary_3393.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3393"
+  rg_summary_3526_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3526_irnt"
+  rg_summary_3536_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3536_irnt"
+  rg_summary_3571.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3571"
+  rg_summary_3581_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3581_irnt"
+  rg_summary_3591.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3591"
+  rg_summary_3606.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3606"
+  rg_summary_3637.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3637"
+  rg_summary_3761_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3761_irnt"
+  rg_summary_3799.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3799"
+  rg_summary_3849.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "3849"
+  rg_summary_398.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "398"
+  rg_summary_399_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "399_irnt"
+  rg_summary_400_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "400_irnt"
+  rg_summary_404_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "404_irnt"
+  rg_summary_4079_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4079_irnt"
+  rg_summary_4080_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4080_irnt"
+  rg_summary_4100_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4100_irnt"
+  rg_summary_4101_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4101_irnt"
+  rg_summary_4104_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4104_irnt"
+  rg_summary_4105_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4105_irnt"
+  rg_summary_4106_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4106_irnt"
+  rg_summary_4119_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4119_irnt"
+  rg_summary_4120_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4120_irnt"
+  rg_summary_41215_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "41215_0"
+  rg_summary_41231_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "41231_1"
+  rg_summary_41235.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "41235"
+  rg_summary_4123_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4123_irnt"
+  rg_summary_41248_1000.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "41248_1000"
+  rg_summary_4124_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4124_irnt"
+  rg_summary_4125_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4125_irnt"
+  rg_summary_4194_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4194_irnt"
+  rg_summary_4195_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4195_irnt"
+  rg_summary_4196_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4196_irnt"
+  rg_summary_4260.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4260"
+  rg_summary_4270.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4270"
+  rg_summary_4282.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4282"
+  rg_summary_4283.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4283"
+  rg_summary_4288_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4288_irnt"
+  rg_summary_4290_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4290_irnt"
+  rg_summary_4291.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4291"
+  rg_summary_4526.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4526"
+  rg_summary_4537.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4537"
+  rg_summary_4548.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4548"
+  rg_summary_4559.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4559"
+  rg_summary_4570.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4570"
+  rg_summary_4581.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4581"
+  rg_summary_4598.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4598"
+  rg_summary_4631.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4631"
+  rg_summary_4653.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4653"
+  rg_summary_4674.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4674"
+  rg_summary_46_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "46_irnt"
+  rg_summary_4717.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4717"
+  rg_summary_4728.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4728"
+  rg_summary_47_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "47_irnt"
+  rg_summary_4803_0.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4803_0"
+  rg_summary_4803_11.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4803_11"
+  rg_summary_4825.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4825"
+  rg_summary_4836.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4836"
+  rg_summary_48_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "48_irnt"
+  rg_summary_4957.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4957"
+  rg_summary_4968.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4968"
+  rg_summary_4979.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4979"
+  rg_summary_4990.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "4990"
+  rg_summary_49_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "49_irnt"
+  rg_summary_5001.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5001"
+  rg_summary_5012.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5012"
+  rg_summary_5084_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5084_irnt"
+  rg_summary_5085_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5085_irnt"
+  rg_summary_5096_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5096_irnt"
+  rg_summary_5097_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5097_irnt"
+  rg_summary_5098_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5098_irnt"
+  rg_summary_5099_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5099_irnt"
+  rg_summary_50_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "50_irnt"
+  rg_summary_5100_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5100_irnt"
+  rg_summary_5101_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5101_irnt"
+  rg_summary_5103_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5103_irnt"
+  rg_summary_5104_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5104_irnt"
+  rg_summary_5106_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5106_irnt"
+  rg_summary_5107_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5107_irnt"
+  rg_summary_5108_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5108_irnt"
+  rg_summary_5109_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5109_irnt"
+  rg_summary_5110_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5110_irnt"
+  rg_summary_5111_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5111_irnt"
+  rg_summary_5112_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5112_irnt"
+  rg_summary_5114_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5114_irnt"
+  rg_summary_5116_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5116_irnt"
+  rg_summary_5119_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5119_irnt"
+  rg_summary_5132_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5132_irnt"
+  rg_summary_5133_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5133_irnt"
+  rg_summary_5134_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5134_irnt"
+  rg_summary_5135_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5135_irnt"
+  rg_summary_5157_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5157_irnt"
+  rg_summary_5158_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5158_irnt"
+  rg_summary_5159_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5159_irnt"
+  rg_summary_5201_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5201_irnt"
+  rg_summary_5254_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5254_irnt"
+  rg_summary_5255_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5255_irnt"
+  rg_summary_5256_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5256_irnt"
+  rg_summary_5257_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5257_irnt"
+  rg_summary_5262_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5262_irnt"
+  rg_summary_5263_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5263_irnt"
+  rg_summary_5264_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5264_irnt"
+  rg_summary_5265_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5265_irnt"
+  rg_summary_5556.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5556"
+  rg_summary_5983_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5983_irnt"
+  rg_summary_5984_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5984_irnt"
+  rg_summary_5993.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "5993"
+  rg_summary_6032_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6032_irnt"
+  rg_summary_6033_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6033_irnt"
+  rg_summary_6138_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6138_1"
+  rg_summary_6138_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6138_100"
+  rg_summary_6138_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6138_2"
+  rg_summary_6138_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6138_3"
+  rg_summary_6138_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6138_4"
+  rg_summary_6138_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6138_5"
+  rg_summary_6138_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6138_6"
+  rg_summary_6139_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6139_2"
+  rg_summary_6139_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6139_3"
+  rg_summary_6141_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6141_1"
+  rg_summary_6142_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6142_1"
+  rg_summary_6142_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6142_2"
+  rg_summary_6142_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6142_4"
+  rg_summary_6143_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6143_1"
+  rg_summary_6143_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6143_3"
+  rg_summary_6143_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6143_4"
+  rg_summary_6144_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6144_1"
+  rg_summary_6144_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6144_4"
+  rg_summary_6144_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6144_5"
+  rg_summary_6145_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6145_1"
+  rg_summary_6145_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6145_100"
+  rg_summary_6145_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6145_6"
+  rg_summary_6146_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6146_100"
+  rg_summary_6146_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6146_2"
+  rg_summary_6146_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6146_3"
+  rg_summary_6147_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6147_1"
+  rg_summary_6147_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6147_2"
+  rg_summary_6147_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6147_3"
+  rg_summary_6147_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6147_4"
+  rg_summary_6149_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6149_1"
+  rg_summary_6149_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6149_100"
+  rg_summary_6149_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6149_3"
+  rg_summary_6149_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6149_4"
+  rg_summary_6149_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6149_6"
+  rg_summary_6150_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6150_1"
+  rg_summary_6150_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6150_100"
+  rg_summary_6150_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6150_2"
+  rg_summary_6150_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6150_4"
+  rg_summary_6152_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6152_100"
+  rg_summary_6152_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6152_5"
+  rg_summary_6152_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6152_6"
+  rg_summary_6152_8.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6152_8"
+  rg_summary_6152_9.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6152_9"
+  rg_summary_6153_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6153_1"
+  rg_summary_6153_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6153_100"
+  rg_summary_6153_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6153_2"
+  rg_summary_6154_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6154_1"
+  rg_summary_6154_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6154_100"
+  rg_summary_6154_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6154_2"
+  rg_summary_6154_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6154_3"
+  rg_summary_6154_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6154_5"
+  rg_summary_6154_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6154_6"
+  rg_summary_6155_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6155_100"
+  rg_summary_6155_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6155_3"
+  rg_summary_6155_7.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6155_7"
+  rg_summary_6157_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6157_100"
+  rg_summary_6157_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6157_3"
+  rg_summary_6159_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_1"
+  rg_summary_6159_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_100"
+  rg_summary_6159_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_3"
+  rg_summary_6159_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_4"
+  rg_summary_6159_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_5"
+  rg_summary_6159_6.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_6"
+  rg_summary_6159_7.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_7"
+  rg_summary_6159_8.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6159_8"
+  rg_summary_6160_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6160_1"
+  rg_summary_6160_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6160_100"
+  rg_summary_6160_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6160_2"
+  rg_summary_6160_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6160_3"
+  rg_summary_6160_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6160_4"
+  rg_summary_6160_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6160_5"
+  rg_summary_6162_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6162_1"
+  rg_summary_6162_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6162_2"
+  rg_summary_6162_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6162_3"
+  rg_summary_6162_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6162_4"
+  rg_summary_6164_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6164_1"
+  rg_summary_6164_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6164_100"
+  rg_summary_6164_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6164_2"
+  rg_summary_6164_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6164_3"
+  rg_summary_6164_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6164_4"
+  rg_summary_6164_5.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6164_5"
+  rg_summary_6177_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6177_1"
+  rg_summary_6177_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6177_100"
+  rg_summary_6177_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6177_2"
+  rg_summary_6179_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6179_1"
+  rg_summary_6179_100.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6179_100"
+  rg_summary_6179_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6179_2"
+  rg_summary_6179_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6179_3"
+  rg_summary_6179_4.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "6179_4"
+  rg_summary_670_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "670_1"
+  rg_summary_680_1.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "680_1"
+  rg_summary_680_2.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "680_2"
+  rg_summary_680_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "680_3"
+  rg_summary_699_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "699_irnt"
+  rg_summary_709.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "709"
+  rg_summary_728.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "728"
+  rg_summary_738.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "738"
+  rg_summary_767_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "767_irnt"
+  rg_summary_777.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "777"
+  rg_summary_78_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "78_irnt"
+  rg_summary_806.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "806"
+  rg_summary_816.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "816"
+  rg_summary_826.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "826"
+  rg_summary_845.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "845"
+  rg_summary_864.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "864"
+  rg_summary_874_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "874_irnt"
+  rg_summary_884.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "884"
+  rg_summary_894.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "894"
+  rg_summary_904.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "904"
+  rg_summary_914_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "914_irnt"
+  rg_summary_924.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "924"
+  rg_summary_93_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "93_irnt"
+  rg_summary_943.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "943"
+  rg_summary_94_irnt.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "94_irnt"
+  rg_summary_971.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "971"
+  rg_summary_981.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "981"
+  rg_summary_ASTHMA_MEDICATIO_COMORB.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "ASTHMA_MEDICATIO_COMORB"
+  rg_summary_C3_BREAST_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C3_BREAST_3"
+  rg_summary_C3_DIGESTIVE_ORGANS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C3_DIGESTIVE_ORGANS"
+  rg_summary_C3_MALE_GENITAL.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C3_MALE_GENITAL"
+  rg_summary_C3_OTHER_SKIN.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C3_OTHER_SKIN"
+  rg_summary_C3_PROSTATE.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C3_PROSTATE"
+  rg_summary_C3_SKIN.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C3_SKIN"
+  rg_summary_C44.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C44"
+  rg_summary_C50.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C50"
+  rg_summary_CARDIAC_ARRHYTM.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "CARDIAC_ARRHYTM"
+  rg_summary_COPD_EXCL.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "COPD_EXCL"
+  rg_summary_COX_ARTHROSIS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "COX_ARTHROSIS"
+  rg_summary_C_BREAST_3.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C_BREAST_3"
+  rg_summary_C_DIGESTIVE_ORGANS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C_DIGESTIVE_ORGANS"
+  rg_summary_C_MALE_GENITAL.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C_MALE_GENITAL"
+  rg_summary_C_OTHER_SKIN.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C_OTHER_SKIN"
+  rg_summary_C_PROSTATE.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C_PROSTATE"
+  rg_summary_C_SKIN.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "C_SKIN"
+  rg_summary_D12.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "D12"
+  rg_summary_G56.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "G56"
+  rg_summary_G6_CARPTU.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "G6_CARPTU"
+  rg_summary_G6_EPIPAROX.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "G6_EPIPAROX"
+  rg_summary_G6_NERPLEX.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "G6_NERPLEX"
+  rg_summary_H26.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "H26"
+  rg_summary_H7_LENS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "H7_LENS"
+  rg_summary_I20.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I20"
+  rg_summary_I21.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I21"
+  rg_summary_I25.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I25"
+  rg_summary_I48.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I48"
+  rg_summary_I83.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I83"
+  rg_summary_I84.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I84"
+  rg_summary_I9_CHD.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I9_CHD"
+  rg_summary_I9_CHD_NOREV.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I9_CHD_NOREV"
+  rg_summary_I9_CORATHER.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I9_CORATHER"
+  rg_summary_I9_DISVEINLYMPH.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I9_DISVEINLYMPH"
+  rg_summary_I9_IHD.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I9_IHD"
+  rg_summary_I9_MI.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I9_MI"
+  rg_summary_I9_MI_STRICT.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "I9_MI_STRICT"
+  rg_summary_ICDMAIN_ANY_ENTRY.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "ICDMAIN_ANY_ENTRY"
+  rg_summary_II_NEOPLASM.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "II_NEOPLASM"
+  rg_summary_ILD_DIFF_DG.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "ILD_DIFF_DG"
+  rg_summary_IX_CIRCULATORY.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "IX_CIRCULATORY"
+  rg_summary_K11_GALLBILPANC.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K11_GALLBILPANC"
+  rg_summary_K11_HERNIA.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K11_HERNIA"
+  rg_summary_K21.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K21"
+  rg_summary_K22.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K22"
+  rg_summary_K40.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K40"
+  rg_summary_K44.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K44"
+  rg_summary_K57.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K57"
+  rg_summary_K80.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "K80"
+  rg_summary_KNEE_ARTHROSIS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "KNEE_ARTHROSIS"
+  rg_summary_M13_ARTHROSIS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M13_ARTHROSIS"
+  rg_summary_M13_DORSALGIA.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M13_DORSALGIA"
+  rg_summary_M13_HALLUXVALGUS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M13_HALLUXVALGUS"
+  rg_summary_M13_LOWBACKPAIN.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M13_LOWBACKPAIN"
+  rg_summary_M13_MENISCUSDERANGEMENTS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M13_MENISCUSDERANGEMENTS"
+  rg_summary_M13_OTHERJOINT.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M13_OTHERJOINT"
+  rg_summary_M16.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M16"
+  rg_summary_M17.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M17"
+  rg_summary_M20.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M20"
+  rg_summary_M23.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M23"
+  rg_summary_M54.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "M54"
+  rg_summary_N39.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "N39"
+  rg_summary_N81.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "N81"
+  rg_summary_PULMONARYDG.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "PULMONARYDG"
+  rg_summary_PULM_MEDICATIO_COMORB.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "PULM_MEDICATIO_COMORB"
+  rg_summary_R07.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "R07"
+  rg_summary_R10.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "R10"
+  rg_summary_R31.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "R31"
+  rg_summary_VII_EYE_ADNEXA.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "VII_EYE_ADNEXA"
+  rg_summary_VI_NERVOUS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "VI_NERVOUS"
+  rg_summary_XIII_MUSCULOSKELET.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "XIII_MUSCULOSKELET"
+  rg_summary_XIV_GENITOURINARY.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "XIV_GENITOURINARY"
+  rg_summary_XIX_INJURY_POISON.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "XIX_INJURY_POISON"
+  rg_summary_XI_DIGESTIVE.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "XI_DIGESTIVE"
+  rg_summary_XVIII_MISCFINDINGS.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "XVIII_MISCFINDINGS"
+  rg_summary_X_RESPIRATORY.html:
+    src: "rg_phenotype_template.Rmd"
+    params:
+      pheno: "X_RESPIRATORY"
