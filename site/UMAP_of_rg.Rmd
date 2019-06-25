@@ -1,0 +1,84 @@
+---
+output: html_document
+title: "UMAP plot"
+params:
+  rerun: FALSE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+require(plotly)
+require(data.table)
+require(GGally)
+require(dplyr)
+
+```
+
+Here we display a Uniform Manifold Approximation and Projection (UMAP) plot, projecting into two dimensions. Clicking on the various groupings of phenotypes allows you to remove that subset of points. Colouring by the final level of the `path` column can be found [here](UMAP_of_rg_final_level.html).
+
+<br>
+
+```{r UMAP, echo=FALSE, warning=FALSE}
+
+library(htmltools)
+
+if(params$rerun) {
+
+	UMAP_rg_2d <- fread('../inputs/UMAP_output_rg_2d.csv', header=TRUE)
+	UMAP_rg_3d <- fread('../inputs/UMAP_output_rg_3d.csv', header=TRUE)
+
+	names(UMAP_rg_2d) <- c("pheno", "UMAP1", "UMAP2")
+	names(UMAP_rg_3d) <- c("pheno", "UMAP1", "UMAP2", "UMAP3")
+
+	corr <- fread("../r2_results/geno_correlation_sig.r2", key=c("p1", "p2"))
+
+	i_max <- length(levels(factor(corr$p1)))+1
+
+	phenotypes <- c(corr$p1[1], corr$p2[1:i_max-1])
+	phenotypes <- gsub("_irnt", "", phenotypes)
+	phenotypes_translation <- c(corr$description_p1[1], corr$description_p2[1:i_max-1])
+
+	phenotypes_and_categories <- fread("../inputs/Fields_and_categories.tsv") %>% mutate(phenotypes_to_match = FieldID)
+	df <- data.table(phenotypes=phenotypes, translation=phenotypes_translation) %>% mutate(phenotypes_to_match = gsub("_.*", "", phenotypes))
+
+	df_merge <- merge(df, phenotypes_and_categories, by='phenotypes_to_match', all.x=TRUE)
+	df_merge <- df_merge[order(df_merge$phenotypes),]
+
+	where_ICD <- grep("main ICD10", df_merge$translation)
+	df_merge$level2cat[where_ICD] <- "ICD10 code"
+	df_merge$finallevelcat[where_ICD] <- "ICD10 code"
+
+	where_finngen <- which(is.na(df_merge$level2cat))
+	df_merge$level2cat[where_finngen] <- "FinnGen"
+	df_merge$finallevelcat[where_finngen] <- "FinnGen"
+
+	df_merge <- df_merge[order(df_merge$phenotypes),]
+	df_merge$UMAP_rg_2d_x <- UMAP_rg_2d$UMAP1
+	df_merge$UMAP_rg_2d_y <- UMAP_rg_2d$UMAP2
+
+	df_merge$UMAP_rg_3d_x <- UMAP_rg_3d$UMAP1
+	df_merge$UMAP_rg_3d_y <- UMAP_rg_3d$UMAP2
+	df_merge$UMAP_rg_3d_z <- UMAP_rg_3d$UMAP3
+
+	save(df_merge, file='../Rdata_outputs/UMAP.Rdata')
+}
+
+load("../Rdata_outputs/UMAP.Rdata")
+
+x <- list(title="UMAP 1", zeroline = FALSE, showline = FALSE, showgrid = TRUE)
+y <- list(title="UMAP 2", zeroline = FALSE, showline = FALSE, showgrid = TRUE)
+
+p <- div(plot_ly(x = df_merge$UMAP_rg_2d_x, y = df_merge$UMAP_rg_2d_y,
+  type = 'scatter',
+  mode = 'markers',
+  # Hover text:
+  text = ~paste0(df_merge$phenotypes, ' : ', df_merge$translation),
+  color = ~factor(df_merge$level2cat), #size = ~carat
+  hoverinfo='text',
+  width=800, height=600) %>% layout(xaxis = x, yaxis = y), align='center')
+p
+
+```
+<br>
+</div>

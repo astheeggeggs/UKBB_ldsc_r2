@@ -1,0 +1,163 @@
+---
+output: html_document
+params:
+title: "LD scores correlation matrix: Alphabetical"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(plotly)
+require(crosstalk)
+require(data.table)
+require(dplyr)
+require(htmltools)
+```
+
+Here are the correlations between the UK Biobank phenotypes, restricting to the subset as defined on our heritability results website.
+
+Rows and columns are ordered alphabetically according to the UK-biobank phenotype identifier.
+
+<br>
+
+```{r corr_alphabet, echo=FALSE}
+
+# Grab all the data
+corr_across <- fread('../r2_results/geno_correlation_across_sexes_sig.r2', key=c("p1", "p2"))
+corr_male <- fread('../r2_results/geno_correlation_male_sig.r2', key=c("p1", "p2"))
+corr_female <- fread('../r2_results/geno_correlation_female_sig.r2', key=c("p1", "p2"))
+
+# Create the matrices for the male and female submatrices
+
+create_correlation_matrix <- function(corr_df)
+{
+	i_max <- length(levels(factor(corr_df$p1)))+1
+	phenotypes <- c(corr_df$p1[1], corr_df$p2[1:i_max-1])
+	phenotypes_translation <- c(corr_df$description_p1[1], corr_df$description_p2[1:i_max-1])
+	corr_matrix <- matrix(0, nrow=i_max, ncol=i_max)
+	p_matrix <- matrix(0, nrow=i_max, ncol=i_max)
+	h2_matrix <- matrix(0, nrow=i_max, ncol=i_max)
+	se_matrix <- matrix(0, nrow=i_max, ncol=i_max)
+
+	# # Correlation matrix
+	corr_matrix[lower.tri(corr_matrix)] <- corr_df$rg
+	corr_matrix[which(lower.tri(corr_matrix), arr.ind=TRUE)[,c(2,1)]] <- corr_df$rg
+	diag(corr_matrix) <- 1
+
+	# P-value matrix
+	p_matrix[lower.tri(p_matrix)] <- corr_df$p
+	p_matrix[which(lower.tri(p_matrix), arr.ind=TRUE)[,c(2,1)]] <- corr_df$p
+
+	# h2 matrix
+	h2_matrix[2:i_max,] <- corr_df$h2_obs[1:i_max-1]
+	h2_matrix <- pmin(h2_matrix, t(h2_matrix)) > 0.05
+
+	# se matrix
+	se_matrix[lower.tri(se_matrix)] <- corr_df$se
+	se_matrix[which(lower.tri(se_matrix), arr.ind=TRUE)[,c(2,1)]] <- corr_df$se
+
+	return(list(se_matrix=se_matrix, h2_matrix=h2_matrix, p_matrix=p_matrix, corr_matrix=corr_matrix,
+		phenotypes=phenotypes, phenotypes_translation=phenotypes_translation))
+}
+
+combine_matrices <- function(across, male, female) {
+	return(cbind(rbind(male, t(across)), rbind(across, female)))
+}
+
+# Remove the rows from the males portion that haven't yet finished on the cluster
+corr_list_male <- create_correlation_matrix(corr_male)
+corr_list_female <- create_correlation_matrix(corr_female)
+
+# Remove the 2 phenotypes that are still running on the cluster
+remove <- which(corr_list_male$phenotypes %in% c("1807_irnt", "M16"))
+corr_list_male$corr_matrix <- corr_list_male$corr_matrix[-remove,-remove]
+corr_list_male$p_matrix <- corr_list_male$p_matrix[-remove,-remove]
+corr_list_male$h2_matrix <- corr_list_male$h2_matrix[-remove,-remove]
+corr_list_male$se_matrix <- corr_list_male$se_matrix[-remove,-remove]
+corr_list_male$phenotypes <- corr_list_male$phenotypes[-remove]
+corr_list_male$phenotypes_translation <- corr_list_male$phenotypes_translation[-remove]
+
+corr_across_matrix <- matrix(corr_across$rg, nrow=nrow(corr_list_male$corr_matrix), ncol=nrow(corr_list_female$corr_matrix), byrow=TRUE)
+p_across_matrix <- matrix(corr_across$p, nrow=nrow(corr_list_male$corr_matrix), ncol=nrow(corr_list_female$corr_matrix), byrow=TRUE)
+h2_across_matrix <- matrix(corr_across$h2_obs, nrow=nrow(corr_list_male$corr_matrix), ncol=nrow(corr_list_female$corr_matrix), byrow=TRUE)
+se_across_matrix <- matrix(corr_across$se, nrow=nrow(corr_list_male$corr_matrix), ncol=nrow(corr_list_female$corr_matrix), byrow=TRUE)
+
+# What about plotting where they intersect and messing with the difference
+intersect_phenotypes <- intersect(corr_list_male$phenotypes, corr_list_female$phenotypes)
+restrict_male <- which(corr_list_male$phenotypes %in% intersect_phenotypes)
+restrict_female <- which(corr_list_female$phenotypes %in% intersect_phenotypes)
+
+corr_list_male$corr_matrix <- corr_list_male$corr_matrix[restrict_male,restrict_male]
+corr_list_male$p_matrix <- corr_list_male$p_matrix[restrict_male,restrict_male]
+corr_list_male$h2_matrix <- corr_list_male$h2_matrix[restrict_male,restrict_male]
+corr_list_male$se_matrix <- corr_list_male$se_matrix[restrict_male,restrict_male]
+corr_list_male$phenotypes <- corr_list_male$phenotypes[restrict_male]
+corr_list_male$phenotypes_translation <- corr_list_male$phenotypes_translation[restrict_male]
+
+corr_list_female$corr_matrix <- corr_list_female$corr_matrix[restrict_female,restrict_female]
+corr_list_female$p_matrix <- corr_list_female$p_matrix[restrict_female,restrict_female]
+corr_list_female$h2_matrix <- corr_list_female$h2_matrix[restrict_female,restrict_female]
+corr_list_female$se_matrix <- corr_list_female$se_matrix[restrict_female,restrict_female]
+corr_list_female$phenotypes <- corr_list_female$phenotypes[restrict_female]
+corr_list_female$phenotypes_translation <- corr_list_female$phenotypes_translation[restrict_female]
+
+corr_across_matrix <- corr_across_matrix[restrict_male,restrict_female] #- corr_list_male$corr_matrix
+p_across_matrix <- p_across_matrix[restrict_male,restrict_female]
+h2_across_matrix <- h2_across_matrix[restrict_male,restrict_female]
+se_across_matrix <- se_across_matrix[restrict_male,restrict_female]
+
+phenotypes <- c(paste("male", corr_list_male$phenotypes), paste("female", corr_list_female$phenotypes))
+phenotypes_translation <- c(paste("male", corr_list_male$phenotypes_translation), paste("female", corr_list_female$phenotypes_translation))
+
+corr_matrix <- combine_matrices(corr_across_matrix, corr_list_male$corr_matrix, corr_list_female$corr_matrix)
+p_matrix <- combine_matrices(p_across_matrix, corr_list_male$p_matrix, corr_list_female$p_matrix)
+h2_matrix <- combine_matrices(h2_across_matrix, corr_list_male$h2_matrix, corr_list_female$h2_matrix)
+se_matrix <- combine_matrices(se_across_matrix, corr_list_male$se_matrix, corr_list_female$se_matrix)
+
+div_colors <- c('blue','white','red')
+
+conditions.text <- paste0(outer(phenotypes, phenotypes, paste, sep=" : "), '\n',
+						  outer(phenotypes_translation, phenotypes_translation, paste, sep= " : "), '\n',
+						  'Correlation: ', signif(corr_matrix, 3), ', p-value: ', signif(p_matrix, 3))
+conditions.text <- matrix(conditions.text, nrow=length(phenotypes), ncol=length(phenotypes))
+
+ax <- list(
+  title = "",
+  zeroline = FALSE,
+  showline = FALSE,
+  showticklabels = FALSE,
+  showgrid = FALSE,
+  ticks = ''
+)
+
+dd.col <- as.dendrogram(hclust(dist(corr_list_male$corr_matrix)))
+ord_male <- order.dendrogram(dd.col)
+
+# dd.col <- as.dendrogram(hclust(dist(corr_list_female$corr_matrix)))
+# ord_female <- order.dendrogram(dd.col)
+
+# ord <- c(ord_male, ord_female + length(ord_male))
+ord <- c(ord_male, ord_male + length(ord_male))
+
+p <- div(plot_ly(z = corr_matrix[ord,ord],
+	colors = colorRamp(div_colors),
+	zmin=-1,
+	zmax=1,
+	type = "heatmap", hoverinfo='text',
+	text = conditions.text[ord,ord],
+	width=800, height=700) %>% layout(yaxis=list(autorange='reversed')) %>% layout(xaxis = ax, yaxis = ax), align='center')
+p
+
+p <- div(plot_ly(z = corr_matrix,
+	colors = colorRamp(div_colors),
+	zmin=-1,
+	zmax=1,
+	type = "heatmap", hoverinfo='text',
+	text = conditions.text,
+	width=800, height=700) %>% layout(yaxis=list(autorange='reversed')) %>% layout(xaxis = ax, yaxis = ax), align='center')
+p
+```
+
+Hovering over the matrix, you can explore the correlations ($r_g$) between pairs of phenotypes, together with their associated $p$-values.
+
+All results are evaluated using LD score correlation regression; ([Bulik-Sullivan et al. 2015](https://www.ncbi.nlm.nih.gov/pubmed/26414676)).
+

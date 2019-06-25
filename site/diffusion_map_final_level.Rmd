@@ -1,0 +1,129 @@
+---
+output: html_document
+title: "Diffusion Map, using ForceAtlas to display results"
+params:
+  rerun: FALSE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+require(plotly)
+
+# Uncomment if you need to generate the .Rdata files to plot
+
+if (params$rerun)
+{
+    require(crosstalk)
+    require(data.table)
+    require(dplyr)
+    require(htmltools)
+    require(FNN)
+    require(ForceAtlas2)
+
+    corr <- fread("../r2_results/geno_correlation_sig.r2", key=c("p1", "p2"))
+    options(warn = -1)
+
+    # Create a function for the diffusion map embedding.
+    diffusion_map_embedding <- function(affinity, k, t)
+    {
+        d <- rowSums(affinity)
+        markov <- affinity / d
+        ev <- eigen(markov)
+        idx <- order(abs(ev$values), decreasing=TRUE)
+        e <- ev$values[idx]
+        v <- ev$vectors[,idx]
+
+        mat <- matrix(nrow=nrow(affinity), ncol=k)
+
+        for (i in 2:(k+1)) {
+            mat[,(i-1)] <- v[,i] * (e[i] ** t)
+        }
+
+        return(mat)
+    }
+}
+
+```
+
+Here we use the squared genetic correlation matrix as the affinity matrix, and compute a Nonlinear dimensionality reduction. We then project this onto the plane using the R package `ForceAtlas`. Points are coloured by the final level of the `path` column in the UK Biobank Data dictionary. Colouring by the second level of the `path` column can be found [here](diffusion_map.html).
+
+<br>
+
+```{r diff_map, echo=FALSE, warning=FALSE}
+
+if (params$rerun){
+    # Uncomment to evaluate the embedding, if it has already been generated just load it in.
+    storeWarn<- getOption("warn")
+    options(warn = -1) 
+    i_max <- length(levels(factor(corr$p1)))+1
+    phenotypes <- c(corr$p1[1], corr$p2[1:i_max-1])
+    phenotypes <- gsub("_irnt", "", phenotypes)
+    phenotypes_translation <- c(corr$description_p1[1], corr$description_p2[1:i_max-1])
+
+    # Correlation matrix
+
+    corr_matrix <- matrix(0, nrow=i_max, ncol=i_max)
+    rownames(corr_matrix) <- phenotypes
+    colnames(corr_matrix) <- phenotypes
+    corr_matrix[lower.tri(corr_matrix)] <- corr$rg
+    corr_matrix[which(lower.tri(corr_matrix), arr.ind=TRUE)[,c(2,1)]] <- corr$rg
+    diag(corr_matrix) <- 1
+
+    corr_matrix <- corr_matrix[order(phenotypes), order(phenotypes)]
+    phenotypes <- phenotypes[order(phenotypes)]
+    phenotypes_translation <- phenotypes_translation[order(phenotypes)]
+
+    phenotypes_and_categories <- fread("../inputs/Fields_and_categories.tsv") %>% mutate(phenotypes_to_match = FieldID)
+    df <- data.table(phenotypes=phenotypes, translation=phenotypes_translation) %>% mutate(phenotypes_to_match = gsub("_.*", "", phenotypes))
+
+    df_merge <- merge(df, phenotypes_and_categories, by='phenotypes_to_match', all.x=TRUE)
+    df_merge <- df_merge[order(df_merge$phenotypes),]
+
+    # Using the diffusion map for 40 components, create the weights and use the force atlas package.
+    affinity <- corr_matrix ** 2
+    diff_embed <- Re(diffusion_map_embedding(affinity, 40, 1))
+    nw <- get.knn(diff_embed, k=40)
+    df_nw <- data.frame(from=rep(seq(1,nrow(nw$nn.index))), to=as.vector(nw$nn.index), weights=1)
+
+    atlasproj <- layout.forceatlas2(df_nw, directed=FALSE, iterations = 5000, plotstep = 100)
+    atlasproj$name <- paste(df_merge$phenotypes, df_merge$translation, sep=" : ")
+
+    where_ICD <- grep("main ICD10", df_merge$translation)
+    df_merge$level2cat[where_ICD] <- "ICD10 code"
+    df_merge$finallevelcat[where_ICD] <- "ICD10 code"
+
+    where_finngen <- which(is.na(df_merge$level2cat))
+    df_merge$level2cat[where_finngen] <- "FinnGen"
+    df_merge$finallevelcat[where_finngen] <- "FinnGen"
+    
+    atlasproj$level2cat <- df_merge$level2cat
+    atlasproj$finallevelcat <- df_merge$finallevelcat
+
+    save('atlasproj', file='../Rdata_outputs/atlasproj.Rdata')
+}
+
+load('../Rdata_outputs/atlasproj.Rdata')
+
+ax <- list(
+  title = "",
+  zeroline = FALSE,
+  showline = FALSE,
+  showticklabels = FALSE,
+  showgrid = FALSE,
+  ticks = ''
+)
+
+# DEV: add in the axis labels.
+p <- div(plot_ly(
+  atlasproj, x = ~V1, y = ~V2,
+  type = 'scatter',
+  mode = 'markers',
+  # Hover text:
+  text = atlasproj$name,
+  color = ~factor(finallevelcat), #size = ~carat
+  hoverinfo='text',
+  width=800, height=800
+) %>% layout(xaxis = ax, yaxis = ax), align='center')
+p
+```
+</div>

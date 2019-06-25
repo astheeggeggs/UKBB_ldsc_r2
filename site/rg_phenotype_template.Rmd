@@ -1,0 +1,292 @@
+---
+output: html_document
+params:
+  pheno: "50"
+  dat: "../Rdata_outputs/geno_correlation_sig.Rdata"
+  dat_male: "../Rdata_outputs/geno_correlation_male_sig.Rdata"
+  dat_female: "../Rdata_outputs/geno_correlation_female_sig.Rdata"
+  dat_across: "../Rdata_outputs/geno_correlation_across_sexes_sig.Rdata"
+---
+
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+require(plotly)
+require(crosstalk)
+require(data.table)
+require(dplyr)
+require(DT)
+require(kableExtra)
+require(formattable)
+require(htmltools)
+# handle params
+phen <- as.character(params$pheno)
+print(phen)
+load(params$dat)
+dat_pheno <- geno_corr_df[.(params$pheno)]
+load(params$dat_male)
+dat_pheno_male <- geno_corr_df[.(params$pheno)]
+load(params$dat_female)
+dat_pheno_female <- geno_corr_df[.(params$pheno)]
+load(params$dat_across)
+dat_pheno_across <- geno_corr_df[.(params$pheno)]
+
+ukcode <- strsplit(phen,"_")[[1]][1]
+isICD <- is.na(as.numeric(ukcode))
+
+both_sexes_defined <- TRUE
+male_defined <- TRUE
+female_defined <- TRUE
+
+if(is.na(dat_pheno$description_p1[1])) {
+	both_sexes_defined <- FALSE
+} else {
+	pheno_description <- dat_pheno_male$description_p1[1]
+}
+
+if(is.na(dat_pheno_male$description_p1[1])) {
+	male_defined <- FALSE
+} else {
+	pheno_description <- dat_pheno_male$description_p1[1]
+}
+
+if(is.na(dat_pheno_female$description_p1[1])) {
+	female_defined <- FALSE
+} else {
+	pheno_description <- dat_pheno_female$description_p1[1]
+}
+
+
+if (isICD) {
+	ukb_url = "http://biobank.ctsu.ox.ac.uk/crystal/field.cgi?id=41202"
+	ukcode = "41202"
+} else {
+	ukb_url = paste0("http://biobank.ctsu.ox.ac.uk/crystal/field.cgi?id=", ukcode)
+}
+
+
+create_barplot <- function(dat_pheno, params)
+{
+	div_colors <- c('blue','white','red')
+	which <- order(dat_pheno$rg)[c(1:20, (nrow(dat_pheno)-80):nrow(dat_pheno))]
+	dat_pheno <- dat_pheno[which,]
+	dat_pheno$logp <- -log10(dat_pheno$p)
+	dat_pheno$p2_tmp <- factor(paste0(dat_pheno$p2,':',dat_pheno$description_p2),
+		levels = paste0(dat_pheno$p2,':',dat_pheno$description_p2)[order(dat_pheno$rg, decreasing = TRUE)])
+	colfunc <- colorRampPalette(c("blue", "white", "red"))
+	pal <- colfunc(1000)[round(ifelse(dat_pheno$rg< -1, 1, ifelse(dat_pheno$rg > 1, 1000, dat_pheno$rg*1000+1000)/2))]
+
+	return(
+		plot_ly(dat_pheno, height=400, width=800) %>%
+				add_trace(
+					x=~p2_tmp,
+					y=~rg,
+					marker = list(color =  pal),
+					hoverinfo="text",
+					text=~paste0(p1, " : ", p2, "\n",
+						description_p1, " : ", description_p2, "\n",
+						"Correlation : ", signif(rg, 3), "\n",
+						"p-value: ", signif(p, 3)),
+					type="bar"
+		  ) %>% layout(
+		  			 showlegend=FALSE,
+		  			 xaxis = list(title="", tickangle=-90, automargin=TRUE, showticklabels=FALSE),
+		  			 yaxis = list(title="$r_g$",side='left', range=c(-1,1))) %>% config(
+		  			 mathjax = "cdn",
+		  			 displaylogo = FALSE, collaborate = FALSE, showLink=FALSE, displayModeBar=FALSE, displaylogo=FALSE, sendData=FALSE)
+	)
+}
+
+create_volcano_plot <- function(dat_pheno, params) 
+{
+	dat_pheno <- dat_pheno[.(params$pheno)]
+	dat_pheno$logp <- -log10(dat_pheno$p)
+	phenotypes_and_categories <- fread("../inputs/Fields_and_categories.tsv") %>% mutate(p2=as.character(FieldID))
+	df_merge <- merge(dat_pheno, phenotypes_and_categories, by='p2', all.x=TRUE)
+	
+	where_ICD <- grep("main ICD10", df_merge$description_p2)
+	df_merge$level2cat[where_ICD] <- "ICD10 code"
+	df_merge$level2cat[where_ICD] <- "ICD10 code"
+	
+	where_finngen <- which(is.na(df_merge$level2cat))
+	df_merge$level2cat[where_finngen] <- "FinnGen"
+	df_merge$finallevelcat[where_finngen] <- "FinnGen"
+
+	x <- list(title="Genotypic correlation ($r_g$)", zeroline = FALSE, 
+		showline = FALSE, showgrid = TRUE, range=c(-1,1))
+	y <- list(title="$-\\log_{10}(p)$", zeroline = FALSE, showline = FALSE, showgrid = TRUE)
+
+	return(
+		plot_ly(x = df_merge$rg, y = df_merge$logp, type='scatter', mode='markers',
+			hoverinfo='text', color=df_merge$level2cat, height=400, width=800,
+			text=~paste0(df_merge$p1, " : ", df_merge$p2, "\n",
+				  	df_merge$description_p1, " : ", df_merge$description_p2, "\n",
+				  	"Correlation : ", signif(df_merge$rg, 3), "\n",
+				  	"p-value: ", signif(df_merge$p, 3))) %>% layout(xaxis = x, yaxis = y) %>% 
+		config(mathjax = "cdn", displaylogo = FALSE, collaborate = FALSE, showLink=FALSE, displayModeBar=TRUE, displaylogo=FALSE, sendData=FALSE)
+	)
+}
+
+create_table <- function(dat_pheno, params, phenotypic_corr=FALSE)
+{
+	dat_pheno <- dat_pheno[.(params$pheno)]
+	ukcode <-  sapply(strsplit(dat_pheno$p2, split='_'),`[`, 1)
+	isPHESANT <- grepl('^[0-9]', ukcode)
+	uk_site <- ifelse(isPHESANT, paste0("http://biobank.ctsu.ox.ac.uk/crystal/field.cgi?id=", ukcode),
+		"http://biobank.ctsu.ox.ac.uk/crystal/field.cgi?id=41202")
+	n <- nrow(dat_pheno)
+	n_tests <- n * (n-1) / 2
+	bonf_thres <- 0.05 / n_tests
+	nominal <- 0.05
+
+	dat_pheno$p2_site <- ifelse(isPHESANT, paste0("<a href='", uk_site, "'>", dat_pheno$p2,"</a>"), dat_pheno$p2)
+  	dat_pheno$description_p2 <- paste0("<a href='rg_summary_", dat_pheno$p2,".html'>", dat_pheno$description_p2,"</a>")
+  	dat_pheno$description_p2 <- paste0("<a href='rg_summary_", dat_pheno$p2,".html'>", dat_pheno$description_p2,"</a>")
+	if(phenotypic_corr) {
+		dat_pheno <- dat_pheno %>% rename("ID" = p2_site, "Phenotype" = description_p2, "rp" = r2p) %>% select(c("ID", "Phenotype", "rg", "p", "rp"))
+		return(
+		dat_pheno %>% mutate(
+			"rg" = ifelse(rg <= 0.0, color_tile("cornflowerblue", "transparent")(round(rg, 2)*c(rg<=0)),
+								   color_tile("transparent", "indianred3")(round(rg,2)*c(rg>=0))),
+			"rg p" = ifelse(p < bonf_thres, cell_spec(format(p, digits = 2), bold = TRUE),
+	                   ifelse(p > nominal, cell_spec(format(p, digits = 2)),
+	                   		  cell_spec(format(p, digits = 2), italic = TRUE))),
+			"rp" = ifelse(rp <= 0.0, color_tile("cornflowerblue", "transparent")(round(rp, 2)*c(rp<=0)),
+								   color_tile("transparent", "indianred3")(round(rp,2)*c(rp>=0)))) %>% select(c("ID", "Phenotype", "rg", "rg p", "rp")) %>% 
+	    kable(escape=FALSE, align=c("l","l","c","c","c")) %>% kable_styling("hover", protect_latex=TRUE)
+	)
+	} else {
+		dat_pheno <- dat_pheno %>% rename("ID" = p2_site, "Phenotype" = description_p2) %>% select(c("ID", "Phenotype", "rg", "p"))
+		return(
+		dat_pheno %>% mutate(
+			"rg" = ifelse(rg <= 0.0, color_tile("cornflowerblue", "transparent")(round(rg, 2)*c(rg<=0)),
+								   color_tile("transparent", "indianred3")(round(rg,2)*c(rg>=0))),
+			"p" = ifelse(p < bonf_thres, cell_spec(format(p, digits = 2), bold = TRUE),
+	                   ifelse(p > nominal, cell_spec(format(p, digits = 2)),
+	                   		  cell_spec(format(p, digits = 2), italic = TRUE)))) %>% select(c("ID", "Phenotype", "rg", "p")) %>% 
+	    kable(escape=FALSE, align=c("l","l","c","c")) %>% kable_styling("hover", protect_latex=TRUE)
+	)
+	}
+}
+
+```
+
+<br>
+
+## Genetic correlations with [`r pheno_description`](`r ukb_url`) {.tabset .tabset-fade}
+
+Genetic correlation is estimated using [LD-score regression](https://github.com/bulik/ldsc). Full details of the correlation estimator can be found [here](https://www.ncbi.nlm.nih.gov/pubmed/26414676). In the tables, $r_g$ is the genetic correlation, and $r_p$ is the phenotypic correlation.
+
+### All {.tabset}
+
+[//]: # <div id="all_bar" class="section level4">
+[//]: # #### Bar plot
+[//]: # 
+[//]: # ```{r make_bar_plot_all, echo=FALSE}
+[//]: # 
+[//]: # div(create_barplot(dat_pheno, params), align='center')
+[//]: # 
+[//]: # ```
+[//]: # 
+[//]: # </div>
+
+<div id="all_volcano" class="section level4">
+#### Volcano plot
+
+```{r make_volcano_plot_all, echo=FALSE, warning=FALSE}
+if(both_sexes_defined)
+	div(create_volcano_plot(dat_pheno, params), align='center')
+```
+
+</div>
+
+
+<div class="well">
+
+```{r make_all_table, echo=FALSE}
+if (both_sexes_defined)
+	create_table(dat_pheno, params, phenotypic_corr=TRUE)
+```
+
+`r ifelse(both_sexes_defined,'','This phenotype is not significant or does not make sense for both sexes.')`
+
+</div>
+
+### Males {.tabset}
+
+[//]: # <div id="male_bar" class="section level4">
+[//]: # #### Bar plot
+[//]: # 
+[//]: # ```{r make_bar_plot_male, echo=FALSE}
+[//]: # 
+[//]: # div(create_barplot(dat_pheno_male, params), align='center')
+[//]: # 
+[//]: # ```
+[//]: # 
+[//]: # </div>
+
+<div id="male_volcano" class="section level4">
+#### Volcano plot
+
+```{r make_volcano_plot_male, echo=FALSE, warning=FALSE}
+if(male_defined)
+	div(create_volcano_plot(dat_pheno_male, params), align='center')
+```
+
+</div>
+
+
+<div class="well">
+
+```{r make_male_table, echo=FALSE}
+if(male_defined)
+	create_table(dat_pheno_male, params)
+```
+
+`r ifelse(male_defined,'','This phenotype is not significant or does not make sense for males.')`
+
+</div>
+
+### Females {.tabset}
+
+[//]: # <div id="female_bar" class="section level4">
+[//]: # #### Bar plot
+[//]: # 
+[//]: # ```{r make_bar_plot_female, echo=FALSE}
+[//]: # 
+[//]: # div(create_barplot(dat_pheno_female, params), align='center')
+[//]: # 
+[//]: # ```
+[//]: # 
+[//]: # </div>
+
+<div id="female_volcano" class="section level4">
+#### Volcano plot
+
+```{r make_volcano_plot_female, echo=FALSE, warning=FALSE}
+if(female_defined)
+	div(create_volcano_plot(dat_pheno_female, params), align='center')
+```
+
+</div>
+
+<div class="well">
+
+```{r make_female_table, echo=FALSE}
+if(female_defined)
+	create_table(dat_pheno_female, params)
+```
+
+`r ifelse(female_defined,'','This phenotype is not significant or does not make sense for females.')`
+
+</div>
+
+<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
+<script src="http://code.jquery.com/jquery-2.1.2.min.js"></script>
+<script src="http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("table").DataTable();
+    } );
+</script>

@@ -1,0 +1,53 @@
+---
+output: html_document
+title: "Principal Component Analysis"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Uncomment if you need to generate the .Rdata files to plot
+require(plotly)
+require(data.table)
+require(GGally)
+require(dplyr)
+
+```
+
+In this plot, we plot each of the first 10 principal components against each other in a matrix, and colour according to second level groupings. This should give a sense of which principal components distinguish between different classes of phenotype as we descend the spectrum.
+
+
+<br>
+
+</div>
+
+```{r pca_12, echo=FALSE, warning=FALSE}
+
+load("../Rdata_outputs/pca.Rdata")
+
+n_vals <- 10
+PCs <- data.frame(PC1=as.numeric(plot_results[[paste0('evecs.', 1)]] * sqrt(plot_results[['evals']][1])),
+	level2cat = plot_results$level2cat)
+
+for(i in 2:n_vals) {
+	PCs[[paste0('PC',i)]] <- as.numeric(plot_results[[paste0('evecs.', i)]] * sqrt(plot_results[['evals']][i]))
+}
+
+min_plot <- -max(abs(PCs[grep('PC',names(PCs))]))
+max_plot <- max(abs(PCs[grep('PC',names(PCs))]))
+
+PCs_restrict <- PCs %>% select(-starts_with("level"))
+Category <- PCs$level2cat
+
+p <- ggpairs(PCs_restrict,
+		mapping=ggplot2::aes(colour = Category),
+		lower = list(continuous = wrap("points", alpha = 1, size=0.05), 
+        combo = wrap("dot", alpha = 0.4, size=0.2)),
+        upper = list(continuous = wrap("points", alpha = 1, size=0.05), 
+        combo = wrap("dot", alpha = 0.4, size=0.2))) + 
+	theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+p <- div(ggplotly(p, tooltip="colour", width=1200, height=1200), align='center')
+p
+
+```

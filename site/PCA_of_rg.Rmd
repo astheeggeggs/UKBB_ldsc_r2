@@ -1,0 +1,95 @@
+---
+output: html_document
+title: "Principal Component Analysis"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Uncomment if you need to generate the .Rdata files to plot
+require(plotly)
+require(data.table)
+require(GGally)
+require(dplyr)
+
+corr <- fread("../r2_results/geno_correlation_sig.r2", key=c("p1", "p2"))
+
+i_max <- length(levels(factor(corr$p1)))+1
+
+phenotypes <- c(corr$p1[1], corr$p2[1:i_max-1])
+phenotypes <- gsub("_irnt", "", phenotypes)
+phenotypes_translation <- c(corr$description_p1[1], corr$description_p2[1:i_max-1])
+
+# Correlation matrix
+
+corr_matrix <- matrix(0, nrow=i_max, ncol=i_max)
+corr_matrix[lower.tri(corr_matrix)] <- corr$rg
+
+rownames(corr_matrix) <- phenotypes
+colnames(corr_matrix) <- phenotypes
+
+corr_matrix[which(lower.tri(corr_matrix), arr.ind=TRUE)[,c(2,1)]] <- corr$rg
+diag(corr_matrix) <- 1
+
+corr_matrix <- corr_matrix[order(phenotypes), order(phenotypes)]
+phenotypes <- phenotypes[order(phenotypes)]
+phenotypes_translation <- phenotypes_translation[order(phenotypes)]
+
+phenotypes_and_categories <- fread("../inputs/Fields_and_categories.tsv") %>% mutate(phenotypes_to_match = FieldID)
+df <- data.table(phenotypes=phenotypes, translation=phenotypes_translation) %>% mutate(phenotypes_to_match = gsub("_.*", "", phenotypes))
+
+df_merge <- merge(df, phenotypes_and_categories, by='phenotypes_to_match', all.x=TRUE)
+df_merge <- df_merge[order(df_merge$phenotypes),]
+df_merge$level2cat[which(is.na(df_merge$level2cat))] <- "FinnGen"
+df_merge$finallevelcat[which(is.na(df_merge$finallevelcat))] <- "FinnGen"
+
+results <- eigen(corr_matrix)
+
+plot_results <- data.frame(evals = results$values, evecs = results$vectors, phenotypes = df_merge$phenotypes,
+	level2cat = df_merge$level2cat, finallevelcat = df_merge$finallevelcat, translation=df_merge$translation)
+
+
+fwrite(corr_matrix, file='../inputs/input_to_UMAP_corr.tsv', row.names=FALSE, col.names=FALSE)
+save('plot_results', file='../Rdata_outputs/pca.Rdata')
+
+```
+
+Here we display the first six principal components, plotting each of the first three pairs against each other. Clicking on the various groupings of phenotypes allows you to remove that subset of points. Plotting every possible pair of points for the first 10 principal components is displayed [here](PCA_pairs.html). Colouring by the final level of the `path` column can be found [here](PCA_of_rg_final_level.html).
+
+<br>
+
+```{r pca_12, echo=FALSE, warning=FALSE}
+
+plot_MDS <- function(plot_results, PCx=1, PCy=2, phenotypes=plot_results$phenotypes, phenotypes_translation=plot_results$translation, colour=plot_results$level2cat)
+{
+	x <- list(title=paste("Principal component", PCx), zeroline = FALSE, showline = FALSE, showgrid = TRUE)
+	y <- list(title=paste("Principal component", PCy), zeroline = FALSE, showline = FALSE, showgrid = TRUE)
+
+	PCx <- as.numeric(plot_results[[paste0('evecs.', PCx)]] * sqrt(plot_results[['evals']][PCx]))
+	PCy <- as.numeric(plot_results[[paste0('evecs.', PCy)]] * sqrt(plot_results[['evals']][PCy]))
+	p <- plot_ly(x = PCx, y = PCy, type='scatter', mode='markers',
+		hoverinfo='text', color = ~factor(colour),
+		text = ~paste0(phenotypes, ' : ', phenotypes_translation), width=800, height=600) %>% layout(xaxis = x, yaxis = y)
+	return(p)
+}
+
+load("../Rdata_outputs/pca.Rdata")
+
+p <- div(plot_MDS(plot_results, 1, 2), align='center')
+p
+```
+
+<br>
+
+```{r pca_34, echo=FALSE, warning=FALSE}
+p <- div(plot_MDS(plot_results, 3, 4), align='center')
+p
+```
+
+<br>
+
+```{r pca_56, echo=FALSE, warning=FALSE}
+p <- div(plot_MDS(plot_results, 5, 6), align='center')
+p
+```
+</div>
