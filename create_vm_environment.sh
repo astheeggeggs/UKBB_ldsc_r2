@@ -7,7 +7,7 @@ HOME=/home/dpalmer
 INSTALL_DIR=/home/dpalmer/R/
 
 # Install a bunch of packages to get R up and running on the cluster.
-PKGS="bzip2 build-essential zlib1g-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libpcre3-dev gfortran openjdk-8-jdk"
+PKGS="bzip2 build-essential zlib1g-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libpcre3-dev gfortran openjdk-8-jdk libxml2-dev libssl-dev"
 for p in $PKGS; do
     sudo apt-get install -y $p
 done
@@ -26,6 +26,8 @@ make install
 export PATH=$INSTALL_DIR/bin:$PATH
 
 # Install a bunch of packages:
+Rscript -e 'install.packages("xml2", repos="http://cran.rstudio.com")'
+Rscript -e 'install.packages("rvest", repos="http://cran.rstudio.com")'
 Rscript -e 'install.packages(c("data.table",
 	"plotly", "crosstalk", "dplyr", "DT", "kableExtra",
 	"formattable", "htmltools"),
@@ -37,62 +39,5 @@ cd $HOME
 # clone PHESANT library
 git clone https://github.com/astheeggeggs/UKBB_ldsc_r2.git
 
-# Ensure that all of the files that are required have been copied over.
-gsutil cp ~/Repositories/ gs://ukbb_association/reengineering_phenofile_neale_lab.r $HOME
+# Move into the scripts folder and create the website.
 
-# Move the raw phenotype file.
-gsutil cp gs://ukbb_3106/ukb11214.csv $HOME
-
-# Run the reegineering_phenofile.r on the raw phenotype data.
-Rscript reengineering_phenofile_neale_lab.r # Note: may have to change hard-coding the start of this script.
-# This will write a .tsv file that we then execute a PHESANT script on.
-
-# Next, we wish to restrict to the subset of samples from our QC analysis.
-gsutil cp gs://ukb31063-mega-gwas/qc/ukb31063.keep_samples.txt $HOME
-
-Rscript restrict_to_QC_samples.r
-
-cd PHESANT/WAS
-# Execute the PHESANT script on the parsed phenotype file.
-NUMPARTS=4
-
-for i in `seq 1 $NUMPARTS`;
-do
-	Rscript phenomeScan.r \
-		--phenofile="../../neale_lab_parsed_and_restricted_to_QCed_samples.tsv" \
-		--variablelistfile="../variable-info/outcome_info_final_round2.tsv" \
-		--datacodingfile="../variable-info/data-coding-ordinal-info.txt" \
-		--userId="userId" \
-		--resDir="../../" \
-		--out="ukb11214_final_january_reference_QC_more_phenos_and_corrected" \
-		--partIdx="$i" \
-		--numParts="${NUMPARTS}"
-done
-
-for i in `seq 1 $NUMPARTS`;
-do
-Rscript phenomeScan.r \
-	--phenofile="../../neale_lab_parsed_and_restricted_to_QCed_samples_males.tsv" \
-	--variablelistfile="../variable-info/outcome_info_final_round2.tsv" \
-	--datacodingfile="../variable-info/data-coding-ordinal-info.txt" \
-	--userId="userId" \
-	--resDir="../../" \
-	--out="ukb11214_final_january_QC_males_more_phenos_and_corrected" \
-	--partIdx="$i" \
-	--numParts="${NUMPARTS}"
-done
-
-for i in `seq 1 $NUMPARTS`;
-do
-	Rscript phenomeScan.r \
-	--phenofile="../../neale_lab_parsed_and_restricted_to_QCed_samples_females.tsv" \
-	--variablelistfile="../variable-info/outcome_info_final_round2.tsv" \
-	--datacodingfile="../variable-info/data-coding-ordinal-info.txt" \
-	--userId="userId" \
-	--resDir="../../" \
-	--out="ukb11214_final_january_QC_females_more_phenos_and_corrected" \
-	--partIdx="$i" \
-	--numParts="${NUMPARTS}"
-done
-
-# Did it work?

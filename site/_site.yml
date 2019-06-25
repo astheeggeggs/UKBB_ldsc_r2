@@ -1,0 +1,33 @@
+name: "UKBB-ldsc-r2"
+output_dir: "../docs"
+navbar:
+  title: '<div><img src="rg_col.svg" style="width:18px;height:18px;"/> UKBB Genetic Correlation</div>'
+  left:
+    - text: "Browser"
+      href:  https://ukbb-rg.hail.is/r2_browser/
+    - text: "Plots"
+      menu:
+        - text: "Correlation matrix alphabetical"
+          href: correlation_plots.html
+        - text: "Correlation matrix agglomerative clustering"
+          href: correlation_plots_agglo.html
+        - text: "Low dimensional visualisations"
+          menu:
+            - text: "PCA"
+              href: pca_of_rg.html
+            - text: "Diffusion map with atlas projection"
+              href: diffusion_map.html
+            - text: "UMAP"
+              href: UMAP_of_rg.html
+  right:
+    - text: "Neale Lab UKBB"
+      href: http://www.nealelab.is/uk-biobank/
+    - icon: fa-github
+      href: https://github.com/astheeggeggs/UKBB_ldsc_r2_website
+    - icon: fab fa-twitter
+      href: https://twitter.com/sbotgwa?lang=en
+output:
+  html_document:
+output_files:
+  index.html:
+    src: "index.Rmd"
