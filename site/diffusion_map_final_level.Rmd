@@ -8,6 +8,7 @@ params:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 require(plotly)
+require(htmltools)
 
 # Uncomment if you need to generate the .Rdata files to plot
 
@@ -16,7 +17,6 @@ if (params$rerun)
     require(crosstalk)
     require(data.table)
     require(dplyr)
-    require(htmltools)
     require(FNN)
     require(ForceAtlas2)
 

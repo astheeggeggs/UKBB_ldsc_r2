@@ -4,6 +4,20 @@ require("rmarkdown")
 setwd("../site")
 rmarkdown::render_site()
 
+# render('UMAP_of_rg.Rmd', output_dir='../docs')
+# render('UMAP_of_rg_final_level.Rmd', output_dir='../docs')
+
+# render('diffusion_map.Rmd', output_dir='../docs')
+# render('diffusion_map_final_level.Rmd', output_dir='../docs')
+
+# render('correlation_plots.Rmd', output_dir='../docs')
+# render('correlation_plots_agglo.Rmd', output_dir='../docs')
+# render('correlation_plots_within_and_across_sexes.Rmd', output_dir='../docs')
+
+# render('PCA_of_rg.Rmd', output_dir='../docs')
+# render('PCA_of_rg_final_level.Rmd', output_dir='../docs')
+# render('PCA_pairs.Rmd', output_dir='../docs')
+
 # yaml for per-pheno sites
 load("../Rdata_outputs/geno_correlation_sig.Rdata")
 pheno <- unique(geno_corr_df$p1)

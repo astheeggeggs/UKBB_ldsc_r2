@@ -11,6 +11,7 @@ require(plotly)
 require(data.table)
 require(GGally)
 require(dplyr)
+require(htmltools)
 
 ```
 

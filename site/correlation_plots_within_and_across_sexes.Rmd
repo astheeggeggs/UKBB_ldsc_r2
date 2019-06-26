@@ -68,13 +68,13 @@ corr_list_male <- create_correlation_matrix(corr_male)
 corr_list_female <- create_correlation_matrix(corr_female)
 
 # Remove the 2 phenotypes that are still running on the cluster
-remove <- which(corr_list_male$phenotypes %in% c("1807_irnt", "M16"))
-corr_list_male$corr_matrix <- corr_list_male$corr_matrix[-remove,-remove]
-corr_list_male$p_matrix <- corr_list_male$p_matrix[-remove,-remove]
-corr_list_male$h2_matrix <- corr_list_male$h2_matrix[-remove,-remove]
-corr_list_male$se_matrix <- corr_list_male$se_matrix[-remove,-remove]
-corr_list_male$phenotypes <- corr_list_male$phenotypes[-remove]
-corr_list_male$phenotypes_translation <- corr_list_male$phenotypes_translation[-remove]
+# remove <- which(corr_list_male$phenotypes %in% c("1807_irnt", "M16"))
+# corr_list_male$corr_matrix <- corr_list_male$corr_matrix[-remove,-remove]
+# corr_list_male$p_matrix <- corr_list_male$p_matrix[-remove,-remove]
+# corr_list_male$h2_matrix <- corr_list_male$h2_matrix[-remove,-remove]
+# corr_list_male$se_matrix <- corr_list_male$se_matrix[-remove,-remove]
+# corr_list_male$phenotypes <- corr_list_male$phenotypes[-remove]
+# corr_list_male$phenotypes_translation <- corr_list_male$phenotypes_translation[-remove]
 
 corr_across_matrix <- matrix(corr_across$rg, nrow=nrow(corr_list_male$corr_matrix), ncol=nrow(corr_list_female$corr_matrix), byrow=TRUE)
 p_across_matrix <- matrix(corr_across$p, nrow=nrow(corr_list_male$corr_matrix), ncol=nrow(corr_list_female$corr_matrix), byrow=TRUE)
@@ -147,14 +147,14 @@ p <- div(plot_ly(z = corr_matrix[ord,ord],
 	width=800, height=700) %>% layout(yaxis=list(autorange='reversed')) %>% layout(xaxis = ax, yaxis = ax), align='center')
 p
 
-p <- div(plot_ly(z = corr_matrix,
-	colors = colorRamp(div_colors),
-	zmin=-1,
-	zmax=1,
-	type = "heatmap", hoverinfo='text',
-	text = conditions.text,
-	width=800, height=700) %>% layout(yaxis=list(autorange='reversed')) %>% layout(xaxis = ax, yaxis = ax), align='center')
-p
+# p <- div(plot_ly(z = corr_matrix,
+# 	colors = colorRamp(div_colors),
+# 	zmin=-1,
+# 	zmax=1,
+# 	type = "heatmap", hoverinfo='text',
+# 	text = conditions.text,
+# 	width=800, height=700) %>% layout(yaxis=list(autorange='reversed')) %>% layout(xaxis = ax, yaxis = ax), align='center')
+# p
 ```
 
 Hovering over the matrix, you can explore the correlations ($r_g$) between pairs of phenotypes, together with their associated $p$-values.

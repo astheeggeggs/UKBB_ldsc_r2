@@ -7,7 +7,7 @@ HOME=/home/dpalmer
 INSTALL_DIR=/home/dpalmer/R/
 
 # Install a bunch of packages to get R up and running on the cluster.
-PKGS="bzip2 build-essential zlib1g-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libpcre3-dev gfortran openjdk-8-jdk libxml2-dev libssl-dev pandoc libcairo2-dev xorg libpango-1.0-0 xorg openbox"
+PKGS="bzip2 build-essential zlib1g-dev libbz2-dev liblzma-dev libcurl4-openssl-dev libpcre3-dev gfortran openjdk-8-jdk libxml2-dev libssl-dev pandoc libcairo2-dev xorg libpango-1.0-0 xorg openbox gfortran"
 for p in $PKGS; do
     sudo apt-get install -y $p
 done
@@ -32,7 +32,7 @@ Rscript -e 'install.packages("rvest", repos="http://cran.rstudio.com")'
 Rscript -e 'install.packages("knitr", repos="http://cran.rstudio.com")'
 Rscript -e 'install.packages(c("data.table",
 	"plotly", "crosstalk", "dplyr", "DT", "kableExtra",
-	"formattable", "htmltools", "pander"),
+	"formattable", "htmltools", "pander", "GGally"),
 	repos="http://cran.rstudio.com")'
 
 # Install git.
