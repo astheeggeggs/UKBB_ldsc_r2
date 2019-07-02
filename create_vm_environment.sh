@@ -32,7 +32,7 @@ Rscript -e 'install.packages("rvest", repos="http://cran.rstudio.com")'
 Rscript -e 'install.packages("knitr", repos="http://cran.rstudio.com")'
 Rscript -e 'install.packages(c("data.table",
 	"plotly", "crosstalk", "dplyr", "DT", "kableExtra",
-	"formattable", "htmltools", "pander", "GGally"),
+	"formattable", "htmltools", "pander", "GGally", "shiny", "shinyWidgets"),
 	repos="http://cran.rstudio.com")'
 
 # Install git.

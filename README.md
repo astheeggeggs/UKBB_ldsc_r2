@@ -49,7 +49,7 @@ This `Rdata` file is generated using the script at `scripts/generate_r2_results_
 
 Using this `Rdata` file we then generate all of the phenotype specific pages.
 
-A template of the file used can be found at  `site/rg_phenotype_template.Rmd`. We then loop over all phenotypes, using the script `scripts/render_site.r`. This script first renders all of the summary plots and then loops over each of the individual phenotypes.
+A template of the file used can be found at  `site/r2_phenotype_template.Rmd`. We then loop over all phenotypes, using the script `scripts/render_site.r`. This script first renders all of the summary plots and then loops over each of the individual phenotypes.
 
 ### Creating the interactive table using the R package shiny
 

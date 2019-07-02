@@ -175,7 +175,7 @@ create_table <- function(dat_pheno, params, phenotypic_corr=FALSE)
 
 ## Genetic correlations with [`r pheno_description`](`r ukb_url`) {.tabset .tabset-fade}
 
-Genetic correlation is estimated using [LD-score regression](https://github.com/bulik/ldsc). Full details of the correlation estimator can be found [here](https://www.ncbi.nlm.nih.gov/pubmed/26414676). In the tables, $r_g$ is the genetic correlation, and $r_p$ is the phenotypic correlation.
+Genetic correlation is estimated using [LD-score regression](https://github.com/bulik/ldsc). Full details of the correlation estimator can be found [here](https://www.ncbi.nlm.nih.gov/pubmed/26414676). In the tables, $r_g$ is the genetic correlation, and \(r_p\) is the phenotypic correlation.
 
 ### All {.tabset}
 

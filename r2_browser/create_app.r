@@ -1,5 +1,5 @@
-library(rsconnect)
+#library(rsconnect)
 library(shiny)
 
-runApp()
-deployApp()
+runApp(port = 3223, host = "0.0.0.0")
+# deployApp()

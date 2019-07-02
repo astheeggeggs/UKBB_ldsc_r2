@@ -18,6 +18,8 @@ rmarkdown::render_site()
 # render('PCA_of_rg_final_level.Rmd', output_dir='../docs')
 # render('PCA_pairs.Rmd', output_dir='../docs')
 
+# render('index.Rmd', output_dir='../docs')
+
 # yaml for per-pheno sites
 load("../Rdata_outputs/geno_correlation_sig.Rdata")
 pheno <- unique(geno_corr_df$p1)

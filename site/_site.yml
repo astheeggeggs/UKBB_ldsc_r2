@@ -4,7 +4,7 @@ navbar:
   title: '<div><img src="rg_col.svg" style="width:18px;height:18px;"/> UKBB Genetic Correlation</div>'
   left:
     - text: "Browser"
-      href:  https://ukbb-rg.hail.is/r2_browser/
+      href:  https://ukbb-rg.hail.is/rg_browser/
     - text: "Plots"
       menu:
         - text: "Correlation matrix alphabetical"
@@ -23,7 +23,7 @@ navbar:
     - text: "Neale Lab UKBB"
       href: http://www.nealelab.is/uk-biobank/
     - icon: fa-github
-      href: https://github.com/astheeggeggs/UKBB_ldsc_r2_website
+      href: https://github.com/astheeggeggs/UKBB_ldsc_r2
     - icon: fab fa-twitter
       href: https://twitter.com/sbotgwa?lang=en
 output:
