@@ -40,7 +40,9 @@ corr <- fread(params$dat, key=c("p1", "p2"))
 
 Here are the correlations between the UK Biobank phenotypes, restricting to the subset as defined heritability results website.
 
-Rows and columns are ordered by correlation distance using hierarchical clustering using the 'complete' method.
+Rows and columns are ordered by correlation distance using hierarchical clustering using the 'complete' method. 
+
+You can also explore the [male](correlation_plots_agglo_male.html) and [female](correlation_plots_agglo_female.html) specific correlation matrices.
 
 <br>
 

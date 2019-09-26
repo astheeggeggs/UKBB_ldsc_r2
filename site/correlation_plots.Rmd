@@ -13,6 +13,7 @@ require(crosstalk)
 require(data.table)
 require(dplyr)
 require(htmltools)
+
 # There should be another data.table that is saved here that is just the lower triangular portion.
 corr <- fread(params$dat, key=c("p1", "p2"))
 # Then, need to include some descriptions of what I did (in Rmarkdown).
@@ -32,14 +33,16 @@ corr <- fread(params$dat, key=c("p1", "p2"))
 # want to run PCA.
 # Include all the relevant links to the UK biobank website. 
 # Ideally, want the numbers associated to each phenotype...would need to parse the summary file for that.
-# Want to add titles etc to the plotly plots that I created that say what everything is.s
+# Want to add titles etc to the plotly plots that I created that say what everything is.
 # Get rid of the gross buttons....or at the very least, figure out how to centre them.
 
 ```
 
 Here are the correlations between the UK Biobank phenotypes, restricting to the subset as defined on our heritability results website.
 
-Rows and columns are ordered alphabetically according to the UK-biobank phenotype identifier.
+Rows and columns are ordered alphabetically according to the UK-biobank phenotype identifier. 
+
+You can also explore the [male](correlation_plots_male.html) and [female](correlation_plots_female.html) specific correlation matrices.
 
 <br>
 

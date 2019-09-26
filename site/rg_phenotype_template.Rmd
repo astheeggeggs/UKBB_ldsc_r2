@@ -20,6 +20,7 @@ require(kableExtra)
 require(formattable)
 require(htmltools)
 # handle params
+
 phen <- as.character(params$pheno)
 print(phen)
 load(params$dat)
@@ -41,7 +42,7 @@ female_defined <- TRUE
 if(is.na(dat_pheno$description_p1[1])) {
 	both_sexes_defined <- FALSE
 } else {
-	pheno_description <- dat_pheno_male$description_p1[1]
+	pheno_description <- dat_pheno$description_p1[1]
 }
 
 if(is.na(dat_pheno_male$description_p1[1])) {
@@ -63,7 +64,6 @@ if (isICD) {
 } else {
 	ukb_url = paste0("http://biobank.ctsu.ox.ac.uk/crystal/field.cgi?id=", ukcode)
 }
-
 
 create_barplot <- function(dat_pheno, params)
 {
@@ -100,7 +100,8 @@ create_barplot <- function(dat_pheno, params)
 create_volcano_plot <- function(dat_pheno, params) 
 {
 	dat_pheno <- dat_pheno[.(params$pheno)]
-	dat_pheno$logp <- -log10(dat_pheno$p)
+	# dat_pheno$logp <- -log10(dat_pheno$p)
+	dat_pheno$logp <- -(log(2) + pnorm(-abs(dat_pheno$z), log.p=TRUE)) / log(10)
 	phenotypes_and_categories <- fread("../inputs/Fields_and_categories.tsv") %>% mutate(p2=as.character(FieldID))
 	df_merge <- merge(dat_pheno, phenotypes_and_categories, by='p2', all.x=TRUE)
 	
@@ -122,7 +123,7 @@ create_volcano_plot <- function(dat_pheno, params)
 			text=~paste0(df_merge$p1, " : ", df_merge$p2, "\n",
 				  	df_merge$description_p1, " : ", df_merge$description_p2, "\n",
 				  	"Correlation : ", signif(df_merge$rg, 3), "\n",
-				  	"p-value: ", signif(df_merge$p, 3))) %>% layout(xaxis = x, yaxis = y) %>% 
+				  	"p-value: ", ifelse(df_merge$p == 0, '< 1e-308', signif(df_merge$p, 3)))) %>% layout(xaxis = x, yaxis = y) %>% 
 		config(mathjax = "cdn", displaylogo = FALSE, collaborate = FALSE, showLink=FALSE, displayModeBar=TRUE, displaylogo=FALSE, sendData=FALSE)
 	)
 }
@@ -130,6 +131,7 @@ create_volcano_plot <- function(dat_pheno, params)
 create_table <- function(dat_pheno, params, phenotypic_corr=FALSE)
 {
 	dat_pheno <- dat_pheno[.(params$pheno)]
+	dat_pheno$p[which(dat_pheno$p == 0)] <- 1e-308
 	ukcode <-  sapply(strsplit(dat_pheno$p2, split='_'),`[`, 1)
 	isPHESANT <- grepl('^[0-9]', ukcode)
 	uk_site <- ifelse(isPHESANT, paste0("http://biobank.ctsu.ox.ac.uk/crystal/field.cgi?id=", ukcode),
@@ -139,9 +141,10 @@ create_table <- function(dat_pheno, params, phenotypic_corr=FALSE)
 	bonf_thres <- 0.05 / n_tests
 	nominal <- 0.05
 
-	dat_pheno$p2_site <- ifelse(isPHESANT, paste0("<a href='", uk_site, "'>", dat_pheno$p2,"</a>"), dat_pheno$p2)
+	# dat_pheno$p2_site <- ifelse(isPHESANT, paste0("<a href='", uk_site, "'>", dat_pheno$p2,"</a>"), dat_pheno$p2)
+  	dat_pheno$p2_site <- paste0("<a href='", uk_site, "'>", dat_pheno$p2,"</a>")
   	dat_pheno$description_p2 <- paste0("<a href='rg_summary_", dat_pheno$p2,".html'>", dat_pheno$description_p2,"</a>")
-  	dat_pheno$description_p2 <- paste0("<a href='rg_summary_", dat_pheno$p2,".html'>", dat_pheno$description_p2,"</a>")
+
 	if(phenotypic_corr) {
 		dat_pheno <- dat_pheno %>% rename("ID" = p2_site, "Phenotype" = description_p2, "rp" = r2p) %>% select(c("ID", "Phenotype", "rg", "p", "rp"))
 		return(
@@ -175,7 +178,11 @@ create_table <- function(dat_pheno, params, phenotypic_corr=FALSE)
 
 ## Genetic correlations with [`r pheno_description`](`r ukb_url`) {.tabset .tabset-fade}
 
-Genetic correlation is estimated using [LD-score regression](https://github.com/bulik/ldsc). Full details of the correlation estimator can be found [here](https://www.ncbi.nlm.nih.gov/pubmed/26414676). In the tables, $r_g$ is the genetic correlation, and \(r_p\) is the phenotypic correlation.
+Genetic correlation is estimated using [LD-score regression](https://github.com/bulik/ldsc). Full details of the correlation estimator can be found [here](https://www.ncbi.nlm.nih.gov/pubmed/26414676). 
+
+In the tables, **rg** is the genetic correlation, and **rp** is the phenotypic correlation. Bonferroni significant *p*-values are displayed in **bold**, nominally significant *p*-values (*p*<0.05) are displayed in *italics*.
+
+*p*-values less than or equal to 1e-308 are set to 1e-308 in the tables due to floating point precision. Exact *p*-values can be calculated from the Z-scores in the [browser](https://ukbb-rg.hail.is/rg_browser/).
 
 ### All {.tabset}
 

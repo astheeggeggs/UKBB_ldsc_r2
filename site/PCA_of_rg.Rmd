@@ -54,7 +54,7 @@ save('plot_results', file='../Rdata_outputs/pca.Rdata')
 
 ```
 
-Here we display the first six principal components, plotting each of the first three pairs against each other. Clicking on the various groupings of phenotypes allows you to remove that subset of points. Plotting every possible pair of points for the first 10 principal components is displayed [here](PCA_pairs.html). Colouring by the final level of the `path` column can be found [here](PCA_of_rg_final_level.html).
+Here we display the first six principal components, plotting each of the first three pairs against each other. Clicking on the various groupings of phenotypes allows you to remove that subset of points. Plotting every possible pair of points for the first 10 principal components is displayed [here](pca_pairs.html). Colouring by the final level of the `path` column can be found [here](pca_of_rg_final_level.html).
 
 <br>
 

@@ -14,9 +14,9 @@ rmarkdown::render_site()
 # render('correlation_plots_agglo.Rmd', output_dir='../docs')
 # render('correlation_plots_within_and_across_sexes.Rmd', output_dir='../docs')
 
-# render('PCA_of_rg.Rmd', output_dir='../docs')
-# render('PCA_of_rg_final_level.Rmd', output_dir='../docs')
-# render('PCA_pairs.Rmd', output_dir='../docs')
+# render('pca_of_rg.Rmd', output_dir='../docs')
+# render('pca_of_rg_final_level.Rmd', output_dir='../docs')
+# render('pca_pairs.Rmd', output_dir='../docs')
 
 # render('index.Rmd', output_dir='../docs')
 
@@ -26,7 +26,7 @@ pheno <- unique(geno_corr_df$p1)
 load("../Rdata_outputs/geno_correlation_male_sig.Rdata")
 pheno <- unique(c(pheno, geno_corr_df$p1))
 load("../Rdata_outputs/geno_correlation_female_sig.Rdata")
-pheno<- unique(c(pheno, geno_corr_df$p1))
+pheno <- unique(c(pheno, geno_corr_df$p1))
 
 for(i in pheno) {
 	render('../site/rg_phenotype_template.Rmd', params=list(pheno=i, dat='../Rdata_outputs/geno_correlation_sig.Rdata',

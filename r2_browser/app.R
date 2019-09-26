@@ -8,10 +8,13 @@ library(shinyjs)
 
 load("Rdata_outputs/geno_correlation_sig.Rdata")
 df <- geno_corr_df
+df$p[which(df$p == 0)] <- 1e-308
 load("Rdata_outputs/geno_correlation_male_sig.Rdata")
 df_m <- geno_corr_df
+df_m$p[which(df_m$p == 0)] <- 1e-308
 load("Rdata_outputs/geno_correlation_female_sig.Rdata")
 df_f <- geno_corr_df
+df_f$p[which(df_f$p == 0)] <- 1e-308
 
 fix_dataframe <- function(df, rpheno=TRUE, full_html_path=TRUE) {
     # Restrict to subset of columns
@@ -132,7 +135,8 @@ server <- function(input, output) {
                 rownames = FALSE,
                 caption = htmltools::tags$caption(
                   style = 'caption-side: top; text-align: left;',
-                  htmltools::em('Columns can be added and removed using the column visibility button.')
+                  htmltools::em('Columns can be added and removed using the column visibility button.', tags$br(),
+                    'p-values less than or equal to 1e-308 are set to 1e-308 due to floating point precision, exact p-values can be calculated from the Z-scores.')
                 ), 
                 escape = FALSE,
                 extensions = c('Buttons'), 
