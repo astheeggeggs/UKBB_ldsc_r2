@@ -1,4 +1,4 @@
-# Collection of scripts to run _r_<sup>2</sup> of everything for both_sexes, males and females.
+# Collection of scripts to run _r_<sup>2</sup> of everything for `both_sexes`, `males` and `females`.
 
 Copy the ldsc output over from the UGER cluster using `gsutil cp `.
 Run `submit_all_additive_r2.sh` for the sumstats files under consideration
