@@ -23,7 +23,7 @@ The subset of traits that we host here represent the collection of traits with m
 
 <div style="text-align: center;">
 <a href="https://ukbb-rg.hail.is/rg_browser/" class="btn btn-primary btn-lg">Browse  $r_g$</a>
-<a href="https://www.dropbox.com/sh/qvuil7op8bw68fm/AACBkXBnj4rPUrlRq3Hm514ha?dl=0"  class="btn btn-primary btn-lg" onclick="trackOutboundLink('https://www.dropbox.com/sh/qvuil7op8bw68fm/AACBkXBnj4rPUrlRq3Hm514ha?dl=0'); return false;">Download Results</a>
+<a href="https://www.dropbox.com/sh/qvuil7op8bw68fm/AACBkXBnj4rPUrlRq3Hm514ha?dl=0"  class="btn btn-primary btn-lg" onclick="trackOutboundLink('https://drive.google.com/file/d/1PgPEj4uG6v4DcuxBEbnAu8DXuPaQbA-k/view?usp=sharing'); return false;">Download Results</a>
 </div>
 
 <br>
